@@ -2,7 +2,7 @@
   <div>
     <div class="title">周末去哪</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img" :src='item.imgUrl' />
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -17,25 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1502/e0/e055cb2c79da8f33.water.jpg_200x200_93193a93.jpg',
-        title: '药王谷',
-        desc: '药王谷所在区域盛产中药材，山林遍生百年药树，山上居民一直有供奉药王菩萨的习俗，药王谷因此得名。'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1502/e0/e055cb2c79da8f33.water.jpg_200x200_93193a93.jpg',
-        title: '药王谷',
-        desc: '药王谷所在区域盛产中药材，山林遍生百年药树，山上居民一直有供奉药王菩萨的习俗，药王谷因此得名。'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1502/e0/e055cb2c79da8f33.water.jpg_200x200_93193a93.jpg',
-        title: '药王谷',
-        desc: '药王谷所在区域盛产中药材，山林遍生百年药树，山上居民一直有供奉药王菩萨的习俗，药王谷因此得名。'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
