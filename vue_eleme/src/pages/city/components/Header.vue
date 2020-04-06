@@ -25,7 +25,9 @@ export default {
     background-color $bg-color
     font-size .32rem
     .header-back
-    position absolute
+      position absolute
+      top 0
+      left 0
       width .64rem
       text-align center
       font-size .4rem
