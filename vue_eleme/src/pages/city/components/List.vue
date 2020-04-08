@@ -62,7 +62,7 @@ export default {
     ...mapMutations(['changeCity'])
   },
   mounted () {
-	  // 创建BScroll实例
+    // 创建BScroll实例
     this.scroll = new BScroll(this.$refs.wrapper)
   },
   watch: {

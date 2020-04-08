@@ -42,7 +42,7 @@ export default {
   },
   methods: {
     // 使用axios异步请求获取首页组件所需要的数据
-	// api的指向在config目录下的index文件中修改
+    // api的指向在config目录下的index文件中修改
     getHomeInfo () {
       axios.get('/api/index.json?city=' + this.city).then(this.getHomeInfoSucc)
     },

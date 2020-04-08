@@ -37,13 +37,13 @@ export default {
     }
   },
   methods: {
-	  // 异步请求数据的处理方法
+    // 异步请求数据的处理方法
     // 请求地址的api可以在router中进行配置
     getCityInfo () {
       axios.get('/api/city.json')
         .then(this.handleGetCityInfoSucc)
     },
-	// 请求返回值得处理方法
+    // 请求返回值得处理方法
     handleGetCityInfoSucc (res) {
       res = res.data
       if (res.ret && res.data) {
