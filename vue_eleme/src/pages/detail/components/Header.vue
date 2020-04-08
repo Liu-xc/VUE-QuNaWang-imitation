@@ -7,9 +7,11 @@
       v-show="showAbs">
       <div class="iconfont header-abs-back">&#xe624;</div>
     </router-link>
-    <div class="header-fixed"
+    <div
+      class="header-fixed"
       v-show="!showAbs"
-      :style="opacityStyle">
+      :style="opacityStyle"
+    >
       <router-link to="/">
         <div class="iconfont header-fixed-back">&#xe624;</div>
       </router-link>
@@ -35,19 +37,17 @@ export default {
       if (top > 60) {
         let opacity = top / 140
         opacity = opacity > 1 ? 1 : opacity
-        this.opacityStyle = {
-          opacity
-        }
+        this.opacityStyle = { opacity }
         this.showAbs = false
       } else {
         this.showAbs = true
       }
     }
   },
-  activated () {
+  mounted () {
     window.addEventListener('scroll', this.handleScroll)
   },
-  deactivated () {
+  unmounted () {
     window.removeEventListener('scroll', this.handleScroll)
   }
 }
@@ -56,36 +56,36 @@ export default {
 <style lang="stylus" scoped>
   @import '~styles/varibles.styl'
   .header-abs
-    position absolute
-    left .2rem
-    top .2rem
-    width .8rem
-    height .8rem
-    line-height .8rem
-    text-align center
-    border-radius .4rem
-    background-color rgba(0, 0, 0, .8)
+    position: absolute
+    left: .2rem
+    top: .2rem
+    width: .8rem
+    height: .8rem
+    line-height: .8rem
+    border-radius: .4rem
+    text-align: center
+    background: rgba(0, 0, 0, .8)
     .header-abs-back
-      color #FFFFFF
-      font-size .4rem
+      color: #fff
+      font-size: .4rem
   .header-fixed
-    z-index 1
-    height $headerHeight
-    line-height $headerHeight
-    position fixed
-    top 0
-    left 0
-    right 0
-    color #FFFFFF
-    text-align center
-    background-color $bg-color
-    font-size .32rem
+    z-index: 2
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    height: $headerHeight
+    line-height: $headerHeight
+    text-align: center
+    color: #fff
+    background: $bg-color
+    font-size: .32rem
     .header-fixed-back
-      position absolute
-      top 0
-      left 0
-      width .64rem
-      text-align center
-      font-size .4rem
-      color #fff
+      position: absolute
+      top: 0
+      left: 0
+      width: .64rem
+      text-align: center
+      font-size: .4rem
+      color: #fff
 </style>

@@ -66,7 +66,7 @@ export default {
         right 0
         bottom .44rem
         box-sizing border-box
-        padding .1srem
+        padding .1rem
         .icon-imgcontent
           display block
           height 100%
