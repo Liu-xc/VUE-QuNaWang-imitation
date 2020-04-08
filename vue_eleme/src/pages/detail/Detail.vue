@@ -32,6 +32,7 @@ export default {
     }
   },
   methods: {
+    // 使用axios异步请求数据
     getDetailInfo () {
       axios.get('/api/detail.json?', {
         params: {
@@ -39,6 +40,7 @@ export default {
         }
       }).then(this.handleGetDataSucc)
     },
+    // 处理请求的返回结果
     handleGetDataSucc (res) {
       res = res.data
       if (res.ret && res.data) {

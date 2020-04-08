@@ -2,6 +2,9 @@
   <div>
     <div class="title">周末去哪</div>
     <ul>
+      <!-- 由于ul标签内部只能有li标签，router可以用tag来实现模拟li标签 -->
+      <!-- 这种写法可以使得ul标签正常编译，语义性更强更简洁（这段代码也可以用div来实现） -->
+      <!-- 给router绑定动态的目标页面使其能够在点击不同项时都能跳转到对应的页面上 -->
         <router-link tag="li" :to="'/detail/' + item.id"
           class="item border-bottom" v-for="item of list" :key="item.id">
           <img class="item-img" :src='item.imgUrl' />

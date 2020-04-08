@@ -12,6 +12,8 @@
           </div>
       </div>
     </div>
+    <!-- fade-animation用于增加渐隐渐显的效果 -->
+    <!-- 并且使用的通用组件中的画廊组件 -->
     <fade-animation>
       <common-gallary
         :imgs="bannerImgs"
@@ -42,6 +44,7 @@ export default {
     FadeAnimation
   },
   methods: {
+    // 控制详情大图的全屏显示与退出全屏显示
     handleBannerClick () {
       this.showGallary = true
     },

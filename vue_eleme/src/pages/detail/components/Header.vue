@@ -32,6 +32,7 @@ export default {
     }
   },
   methods: {
+    // 控制header的随滚动渐隐渐显效果
     handleScroll () {
       const top = document.documentElement.scrollTop
       if (top > 60) {
@@ -44,9 +45,11 @@ export default {
       }
     }
   },
+  // 给当前窗口增加scroll监听事件
   mounted () {
     window.addEventListener('scroll', this.handleScroll)
   },
+  // 离开本页的时候要卸载监听事件
   unmounted () {
     window.removeEventListener('scroll', this.handleScroll)
   }

@@ -8,6 +8,8 @@
         <span class="item-title-icon"></span>
         {{item.title}}
       </div>
+      <!-- 递归组件，在组件内部递归地调用自己，
+      需要为组件命名，且传入的数据格式能够支持递归 -->
       <div v-if="item.children" class="item-children">
         <detail-list :list="item.children"></detail-list>
       </div>

@@ -5,6 +5,8 @@ try {
   }
 } catch (e) {}
 
+// store是一个公用的数据池
+// 向组件提供city属性
 export default {
   city: defaultCity
 }

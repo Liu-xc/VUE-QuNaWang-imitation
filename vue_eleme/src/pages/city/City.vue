@@ -15,6 +15,7 @@
 </template>
 
 <script>
+// 引入子组件以及插件
 import axios from 'axios'
 import CityHeader from './components/Header.vue'
 import CitySearch from './components/Search.vue'
@@ -36,10 +37,13 @@ export default {
     }
   },
   methods: {
+	  // 异步请求数据的处理方法
+    // 请求地址的api可以在router中进行配置
     getCityInfo () {
       axios.get('/api/city.json')
         .then(this.handleGetCityInfoSucc)
     },
+	// 请求返回值得处理方法
     handleGetCityInfoSucc (res) {
       res = res.data
       if (res.ret && res.data) {
@@ -52,6 +56,7 @@ export default {
       this.letter = letter
     }
   },
+  // 发起数据请求
   mounted () {
     this.getCityInfo()
   }

@@ -6,6 +6,7 @@
        <img class="swiper-img"  :src="item.imgUrl" />
      </swiper-slide>
      <!-- Optional controls -->
+     <!-- swiper插件的可选项，加上可以显示当前页在队列中的位置 -->
      <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
    </div>
