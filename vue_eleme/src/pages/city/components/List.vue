@@ -53,16 +53,20 @@ export default {
     })
   },
   methods: {
+    // 修改缓存并跳转
     handleCityClick (city) {
       this.changeCity(city)
       this.$router.push('/')
     },
+    // 获取修改城市的方法
     ...mapMutations(['changeCity'])
   },
   mounted () {
+	  // 创建BScroll实例
     this.scroll = new BScroll(this.$refs.wrapper)
   },
   watch: {
+    // 当letter改变时将对应的字母开头的城市列表滚动到可视区内
     letter () {
       if (this.letter) {
         const element = this.$refs[this.letter][0]

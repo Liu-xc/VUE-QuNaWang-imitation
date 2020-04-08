@@ -11,6 +11,7 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
+      // 将路由访问中的api进行替换，将页面访问导到想要的路径上
       '/api': {
         target: 'http://localhost:8080',
         pathRewrite: {

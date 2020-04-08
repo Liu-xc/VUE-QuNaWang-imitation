@@ -13,6 +13,7 @@
   </div>
 </template>
 
+<!-- 使用swiper实现的画廊组件 -->
 <script>
 export default {
   name: 'CommonGallary',

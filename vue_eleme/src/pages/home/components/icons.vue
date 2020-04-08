@@ -1,6 +1,9 @@
 <template>
   <div class="icons">
+    <!-- 使用了awesome-swipper插件，可以自动实现很好的图片滚动效果 -->
+    <!-- option是插件的配置属性 -->
     <swiper :options="swiperOption">
+      <!-- 每页包裹一个swiper-slide -->
       <swiper-slide v-for="page of pages" :key="page.id">
         <div class="icon" v-for="item of page"
         :key="item.id"
@@ -23,12 +26,15 @@ export default {
   },
   data () {
     return {
+      // 为swiper配置属性
       swiperOption: {
+        // 是否自动滚动
         autoplay: false
       }
     }
   },
   computed: {
+    // 通过计算将首页的图标进行分页，每页八个
     pages () {
       const pages = []
       this.list.forEach((item, index) => {
